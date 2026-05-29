@@ -19,18 +19,18 @@ SERVICOS = {
 
 HORARIOS_PADRAO = ["09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:30"]
 
-# --- PALETA DE CORES ANIME RETRÔ (ANOS 80/90) ---
-COR_FUNDO = "#0a0a12"        # Azul escuro quase preto (vibe céu de anime clássico)
-COR_CONTAINER = "#16162a"    # Container escuro contrastante
-COR_TEXTO = "#ffffff"        # Texto branco limpo
-COR_NEON = "#00ff66"         # Verde Neon / Ciano Cyberpunk para destaques
-COR_BOTAO_PADRAO = "#1f1f3a" # Fundo dos botões normais
-COR_IMPORTAR = "#2e7d32"     # Verde escuro para o botão de importar limpo
-COR_ALERTA = "#ff0055"       # Vermelho Neon para Sair/Cancelar
 
-# Cores estilo "preencha aqui" para os inputs
-COR_INPUT_FUNDO = "#0f0f1c"  # Mais escuro que o container para dar profundidade
-COR_INPUT_TEXTO = "#a0a0b0"  # Texto ligeiramente acinzentado (indica campo a preencher)
+COR_FUNDO = "#0a0a12"       
+COR_CONTAINER = "#16162a"   
+COR_TEXTO = "#ffffff"       
+COR_NEON = "#00ff66"         
+COR_BOTAO_PADRAO = "#1f1f3a" 
+COR_IMPORTAR = "#2e7d32"     
+COR_ALERTA = "#ff0055"       
+
+
+COR_INPUT_FUNDO = "#0f0f1c"  
+COR_INPUT_TEXTO = "#a0a0b0" 
 
 FONTE_TITULO = ("Courier New", 20, "bold")
 FONTE_SUBTITULO = ("Courier New", 11, "bold")
@@ -62,7 +62,7 @@ class BarbeariaApp:
         self.root.geometry("450x580") #
         self.root.configure(bg=COR_FUNDO)
         
-        # Estilização das Comboboxes (Menus de escolha)
+      
         style = ttk.Style()
         style.theme_use('clam')
         style.configure(
@@ -72,7 +72,7 @@ class BarbeariaApp:
             foreground=COR_TEXTO,
             arrowcolor=COR_NEON
         )
-        # Customiza a lista interna que cai da Combobox
+       
         self.root.option_add("*TCombobox*Listbox.background", COR_INPUT_FUNDO)
         self.root.option_add("*TCombobox*Listbox.foreground", COR_INPUT_TEXTO)
         self.root.option_add("*TCombobox*Listbox.selectBackground", COR_BOTAO_PADRAO)
@@ -104,7 +104,7 @@ class BarbeariaApp:
         btn_voltar.pack(side="bottom", pady=20)
 
     def mostrar_menu_principal(self):
-        self.root.geometry("450x580") #
+        self.root.geometry("450x580") 
         self.limpar_tela()
         
         lbl_welcome = tk.Label(self.root, text="Barbearia Andrades", font=FONTE_TITULO, fg=COR_NEON, bg=COR_FUNDO, pady=15)
